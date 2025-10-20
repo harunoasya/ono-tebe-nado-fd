@@ -17,6 +17,10 @@
     list-style: circle;
 }
 
+.header__link_active {
+    text-decoration: none;
+}
+
 .header__links-list-item_no-bullit {
     list-style: none;
 }
@@ -47,6 +51,7 @@
 }
 
 .cover {
+    z-index: 1;
     position: relative;
     min-height: 757px;
     padding: 165px 50px 0;
@@ -58,7 +63,6 @@
 
 .cover__title {
     position: relative;
-    z-index: 2;
     color: #fff;
     font-size: 100px;
     line-height: 115%;
@@ -94,7 +98,7 @@
 .overlay {
     position: absolute;
     inset: 0;
-    z-index: 1;
+    z-index: -1;
     background-color: rgb(0, 0, 0, 0.6);
 }
 
@@ -111,7 +115,6 @@
 }
 
 .cover__description-text {
-    z-index: 2;
     font-weight: normal;
     font-size: 22px;
     line-height: 28px;
@@ -120,7 +123,6 @@
 
 .bet-button {
     all: unset;
-    z-index: 2;
     border: 1px solid #fff;
     padding: 12px 32px 11px 31px ;
     font-size: 22px;
@@ -136,7 +138,6 @@
     margin-left: 40px;
     font-size: 40px;
     text-transform: uppercase;
-
 }
 
 .lots__card-list,
@@ -145,6 +146,7 @@
 }
 
 .card {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -168,13 +170,15 @@
 }
 
 .lots__card-list {
+    z-index: 1;
     display: flex;
     gap: 25px;
     margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
 .card__title {
-    z-index: 3;
+    z-index: 1;
     color: #fff;
     font-weight: bold;
     font-size: 22px;
@@ -184,21 +188,24 @@
 }
 
 .card__text {
-    z-index: 3;
+    z-index: 1;
     color: #fff;
     font-size: 20px;
     line-height: 120%;
 }
 
 .card_type_film {
+    z-index: -2;
     background-image: url(../images/card-lot-01.jpg);
 }
 
 .card_type_book {
+    z-index: -2;
     background-image: url(../images/card-lot-02.jpg);
 }
 
 .card_type_picture {
+    z-index: -2;
     background-image: url(../images/card-lot-03.jpg);
 }
 
@@ -267,6 +274,10 @@
     flex-direction: column;
     align-items: center;
     list-style: none;
+}
+
+.footer__menu-link_active {
+    text-decoration: none;
 }
 
 .footer__social-list {

@@ -119,12 +119,12 @@
 }
 
 .bet-button {
+    all: unset;
     z-index: 2;
     border: 1px solid #fff;
     padding: 12px 32px 11px 31px ;
     font-size: 22px;
     background-color: transparent;
-    all: unset;
 }
 
 .lots {
